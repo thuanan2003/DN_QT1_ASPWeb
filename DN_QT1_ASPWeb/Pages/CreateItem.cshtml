@@ -1,0 +1,40 @@
+﻿@page
+@model DN_QT1_ASPWeb.Pages.CreateItemModel
+@{
+}
+<form method="post">
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">ID</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="ItemID" value="@Model.item.ItemID" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Name</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="ItemName" value="@Model.item.ItemName" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Size</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="Size" value="@Model.item.Size" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Price</label>
+		<div class="col-sm-6">
+			<input type="number" class="form-control" name="Price" value="@Model.item.Price" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<div class="offset-sm-3 d-grid col-sm-3">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+		<div class="d-grid col-sm-3">
+			<a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+		</div>
+	</div>
+</form>
+
+

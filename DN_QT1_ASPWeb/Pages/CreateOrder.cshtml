@@ -1,0 +1,33 @@
+﻿@page
+@model DN_QT1_ASPWeb.Pages.CreateOrderModel
+@{
+}
+<form method="post">
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Order ID</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="OrderID" value="@Model.order.OrderID" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Order Date</label>
+		<div class="col-sm-6">
+			<input type="date" class="form-control" name="OrderDate" value="@Model.order.OrderDate" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Customer ID</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="CustID" value="@Model.order.CustID" />
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 d-grid col-sm-3">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+		<div class="d-grid col-sm-3">
+			<a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+		</div>
+	</div>
+</form>

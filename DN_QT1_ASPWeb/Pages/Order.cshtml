@@ -1,0 +1,43 @@
+﻿@page
+@model DN_QT1_ASPWeb.Pages.OrderModel
+@{
+	ViewData["Title"] = "Order";
+}
+<div>
+	<h1>List of Order</h1>
+	<div class="col-6">
+		<a asp-page="CreateOrder" class="btn btn-primary">Create New Order</a>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>OrderID</th>
+				<th>OrderDate</th>
+				<th>CustID</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var order in Model.orderParameterList)
+			{
+				<tr>
+					<td> @order.OrderID</td>
+					<td> @order.OrderDate</td>
+					<td> @order.CustID</td>
+					<td>
+						<div class="w-75 btn-group" role="group">
+							<a asp-page="EditOrder" asp-route-id="@Model.order.OrderID" name="OrderID" value="@Model.order.OrderID" class="btn btn-primary mx-2">
+								Edit
+							</a>
+
+							<a asp-page="DeleteOrder" asp-route-id="@Model.order.OrderID" name="OrderID" value="@Model.order.OrderID" class="btn btn-danger mx-2">
+								Delete
+							</a>
+						</div>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
